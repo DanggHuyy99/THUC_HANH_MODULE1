@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nhập 1 chuỗi</p>
+    <input type="text" id="text">
+    <button onclick="result()">Kết quả</button>
+    <p id="result"></p>
+    <script>
+        let arr = ['a', 'o', 'u', 'e', 'i']
+        function result() {
+            let string = document.getElementById('text').value;
+            let string_splice = string.split('');
+            console.log(string_splice);
+            check(string_splice);
+        }
+
+        function check(a) {
+            let count = 0;
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == 'a' || a[i] == 'o' || a[i] == 'u' || a[i] == 'i' || a[i] == 'e') {
+                    count++;
+                }
+            }
+            console.log("Có " + count + " ký tự nguyên âm");
+            document.getElementById('result').innerHTML = "Có " + count + " ký tự nguyên âm";
+        }
+    </script>
+</body>
+
+</html>
