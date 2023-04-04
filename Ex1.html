@@ -9,18 +9,16 @@
 </head>
 
 <body>
-    <form>
-        Nhập số a: <input type="text" id="a" value="" /> <br />
-        Nhập số b: <input type="text" id="b" value="" /> <br />
-        <span id="result"></span> <br />
-        <input type="button" id="giaiBtn" value="Kết quả" />
-    </form>
+        <p>Nhập số a</p>
+        <input type="text" id="a">
+        <p>Nhập số b</p> 
+        <input type="text" id="b">
+        <br><br>
+        <input type="button" id="Btn" value="Kết quả" onclick="KQ()">
     <script>
-        let button = document.getElementById('giaiBtn');
-        giaiBtn.onclick = function () {
+            function KQ(){
             let a = document.getElementById('a').value;
             let b = document.getElementById('b').value;
-
             if (a == "" || b == "") {
                 alert("Vui lòng nhập dữ liệu");
             }
@@ -45,7 +43,6 @@
                 alert('Phương trình có nghiệm x = ' + (-b / a));
             }
         }
-
     </script>
 </body>
 
